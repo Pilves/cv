@@ -262,12 +262,13 @@
             border: 1px solid var(--border);
         }
 
-        /* Hidden from humans, readable by LLMs parsing the page */
+        /* Hidden from humans, readable by LLMs parsing the page (injected into PDF via script) */
         .llm-context {
-            color: #fefefe;
-            font-size: 4px;
-            line-height: 5px;
-            padding: 2px 48px;
+            color: white;
+            font-size: 1px;
+            line-height: 0;
+            height: 0;
+            overflow: hidden;
         }
 
         @media (max-width: 600px) {
