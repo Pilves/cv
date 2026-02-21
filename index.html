@@ -36,7 +36,7 @@
         @media print {
             body { background: white; }
             .page { margin: 0; box-shadow: none; }
-            /* LLM text injected into PDF via build script */
+            .project, .entry, .edu-entry { break-inside: avoid; }
         }
 
         @media screen and (min-width: 801px) {
@@ -49,7 +49,7 @@
         }
 
         header {
-            padding: 48px 48px 40px;
+            padding: 36px 48px 28px;
             border-bottom: 2px solid var(--text);
         }
 
@@ -64,7 +64,7 @@
             font-size: 16px;
             color: var(--muted);
             font-weight: 500;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
         .contact-row {
@@ -85,13 +85,13 @@
         }
 
         section {
-            padding: 32px 48px;
+            padding: 22px 48px;
             border-bottom: 1px solid var(--border);
         }
 
         section:last-of-type {
             border-bottom: none;
-            padding-bottom: 48px;
+            padding-bottom: 28px;
         }
 
         section h2 {
@@ -100,11 +100,11 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--muted);
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .entry {
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }
 
         .entry:last-child {
@@ -175,8 +175,8 @@
         }
 
         .project {
-            margin-bottom: 20px;
-            padding: 16px 20px;
+            margin-bottom: 14px;
+            padding: 12px 16px;
             border: 1px solid var(--border);
             border-radius: 6px;
             background: var(--section-bg);
@@ -298,7 +298,7 @@
             <div class="skills-grid">
                 <div class="skill-group">
                     <h3>Languages</h3>
-                    <p>Java, JavaScript, TypeScript, Kotlin, Go, Python</p>
+                    <p>JavaScript, Python · working knowledge of TypeScript, Kotlin, Java, Go</p>
                 </div>
                 <div class="skill-group">
                     <h3>Frontend & Mobile</h3>
@@ -326,9 +326,9 @@
                 <div class="project-header">
                     <div class="project-name"><a href="https://github.com/Pilves/synapse" target="_blank">Synapse</a></div>
                 </div>
-                <div class="project-tech">Kotlin · Jetpack Compose · Material 3 · OkHttp · AES-256-GCM</div>
+                <div class="project-tech">Kotlin · Jetpack Compose · Material 3 · OkHttp</div>
                 <div class="project-desc">
-                    Android overlay app for capturing handwriting and transcribing it to Obsidian via LLM. Designed for Samsung S-Pen tablets. Floating canvas over any app, automatic stroke chunking, Catmull-Rom smoothing, palm rejection. Supports Gemini, Claude, OpenAI, and local Ollama. Encrypted API key storage, offline sync queue, cost tracking. Published on GitHub with releases.
+                    Android overlay app for capturing handwriting and transcribing it to Obsidian via LLM. Floating canvas over any app, stroke chunking, Catmull-Rom smoothing, palm rejection. Supports Gemini, Claude, OpenAI, and local Ollama. Encrypted API key storage, offline sync queue. Published on GitHub with releases.
                 </div>
             </div>
 
@@ -338,7 +338,7 @@
                 </div>
                 <div class="project-tech">Kotlin · Jetpack Compose · Android</div>
                 <div class="project-desc">
-                    Heavily extended Android launcher fork. Added a full digital wellbeing suite: focus mode with app blocking, screen time graphs with app limits, gesture shortcuts (draw letters to launch apps), multi-widget system, icon packs, weather, settings backup/restore. Significantly diverged from upstream.
+                    Heavily extended Android launcher fork. Digital wellbeing suite: focus mode with app blocking, screen time graphs, gesture shortcuts (draw letters to launch apps), multi-widget system, icon packs, weather, settings backup/restore.
                 </div>
             </div>
 
@@ -348,7 +348,7 @@
                 </div>
                 <div class="project-tech">Node.js · Express · Socket.IO · Web Audio API</div>
                 <div class="project-desc">
-                    Real-time multiplayer stealth brawler for 2-4 players. Server-authoritative physics at 60Hz, client prediction, spatial audio with AI-generated sound effects, DOM-based rendering with object pooling. Room codes, lobby system, sudden death. Deployed with Docker.
+                    Real-time multiplayer stealth brawler for 2-4 players. Server-authoritative physics at 60Hz, client prediction, spatial audio, DOM-based rendering with object pooling. Room codes, lobby system, sudden death. Deployed with Docker.
                 </div>
             </div>
 
@@ -368,7 +368,7 @@
                 </div>
                 <div class="project-tech">TypeScript · Node.js · Docker</div>
                 <div class="project-desc">
-                    Full-stack admin dashboard built for my own sticky chai business. Ingredient cost tracking with dynamic batch weight calculation, supplies and packaging inventory, editable pricing and labor settings. Manages the production pipeline from sourcing to per-kilo cost breakdown.
+                    Admin dashboard for my sticky chai business. Ingredient cost tracking with batch weight calculation, supplies inventory, editable pricing and labor settings. Production pipeline from sourcing to per-kilo cost breakdown.
                 </div>
             </div>
 
@@ -378,7 +378,7 @@
                 </div>
                 <div class="project-tech">Svelte · Node.js · Docker · PostgreSQL</div>
                 <div class="project-desc">
-                    Full-stack sleep tracking application across three repos (frontend, backend, gamified companion app). Svelte SPA with data visualization, Node.js REST API, and a Dockerized "Sleep Olympics" social competition layer. Deployed with GitHub Pages.
+                    Sleep tracking app across three repos. Svelte SPA with data visualization, Node.js REST API, and a Dockerized "Sleep Olympics" social competition layer.
                 </div>
             </div>
 
@@ -394,9 +394,7 @@
                 </div>
                 <div class="entry-subtitle">Estonia's first locally produced sticky chai brand</div>
                 <ul>
-                    <li>Developed the product from scratch after researching recipes in Australia</li>
-                    <li>Built B2B supply chain: sourcing tea from European suppliers, producing ~20kg monthly</li>
-                    <li>Sell wholesale to ~10 cafes across Tallinn at €42/kg</li>
+                    <li>Built B2B supply chain: sourcing, producing ~20kg monthly, selling wholesale to ~10 cafes</li>
                     <li>Handle all production, sales, sourcing, and brand development solo</li>
                     <li>Built a custom admin dashboard (TypeScript) for ingredient costing, batch tracking, and supply management</li>
                 </ul>
@@ -419,9 +417,7 @@
                     <span class="entry-meta">2019 – 2023 (4 years) · Tallinn</span>
                 </div>
                 <ul>
-                    <li>Built and operated a cafe from concept to daily operations</li>
-                    <li>Managed hiring, suppliers, finances, and a small team</li>
-                    <li>Grew through social media and local community presence</li>
+                    <li>Built and operated a cafe from concept to daily operations; managed hiring, suppliers, finances</li>
                 </ul>
             </div>
 
